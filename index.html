@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mockup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./openlayers/ol.js"></script>
+    <link rel="stylesheet" href="./openlayers/ol.css">
+    <script src="./main.js">
+    </script>
+    <script type = "module" src = "./module1.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    
+    
+
+  </head>
+  <body>
+
+
+    
+        <details class="step" id="step1" open>  
+          <summary class="content">
+            <span>
+              Where is your crop field located?
+            </span>
+            <div class="chivron"></div>
+          </summary>
+          <div class="content">
+            <div id="map-container">
+              <div id="map" class="map"></div>
+              <div id="coords">
+                <span>Click on the map to select location</span>
+              </div>
+            </div>
+          </div>
+          <div class="step-navigation">
+            <button type = "button" id = "step1continue">Continue</button>
+          </div>
+        </details>
+
+
+
+
+        <details class="step" id="step2">
+        <form action="/add" method="POST">
+          <summary disabled>
+            <span>
+              What do you prioritize in variety selection? 
+            </span>
+            <!-- <div class="chivron"></div> -->
+          </summary>
+          <div class="content">
+            <div class="col">
+              <label>A</label>
+              <input type="radio" value = "Disease Resistance" id = "step2answer" name="step2answer">
+              <label>B</label>
+              <input type="radio" value = "Seedling Vigor" id = "step2answer" name="step2answer">
+              <label>C</label>
+              <input type="radio" value = "Yield" id = "step2answer" name="step2answer">
+            </div>
+          </div>
+
+ 
+
+
+
+          <summary disabled>
+            <span>
+              On average, how severe is the disease threat? 
+            </span>
+
+          </summary>
+          <div class="content">
+            <div class="col">
+              <label for id = "trivialcbox1">Trivial</label>
+              <input type="radio" value = "Trivial" name = "step3answer">
+
+              <label for id = "moderatecbox1">Moderate</label>
+              <input type="radio" value = "Moderate" id = "moderatecbox1" name = "step3answer">
+
+              <label for id = "majorcbox1">Major</label>
+              <input type="radio" value = "major" id = "majorcbox1" name = "step3answer">
+            </div>
+          </div>
+
+
+
+
+
+
+          <summary disabled>
+            <span>
+              On average, how severe are threats posed by thrips?
+            </span>
+          </summary>
+
+          <div class="content">
+            <div class="col">
+              <label for id = "trivialcbox2">Trivial</label>
+              <input type="radio" value = "Trivial" id = "trivialcbox2" name = "step4answer">
+              
+              <label for id = "moderatecbox2">Moderate</label>
+              <input type="radio" value = "moderate" id = "moderatecbox2" name = "step4answer">
+              
+              <label for id = "majorcbox2">Major</label>
+              <input type="radio" value = "major" id = "majorcbox2" name = "step4answer">
+            </div>
+          </div>
+
+
+
+
+
+
+          <summary disabled>
+            <span>
+              On average, how severe are threats posed by cotton fleahoppers?
+            </span>
+          </summary>
+
+
+          <div class="content">
+            <div class="col">
+              <label for id = "trivialcbox3">Trivial</label>
+              <input type="radio" value = "Trivial" id = "trivialcbox3" name = "step5answer">
+              <label for id = "moderatecbox3">Moderate</label>
+
+              <input type="radio" value = "moderate" id = "moderatecbox3" name = "step5answer">
+              <label for id = "majorcbox3">Major</label>
+
+              <input type="radio" value = "major" id = "majorcbox3" name = "step5answer">
+            </div>
+          </div>
+        </details>
+          <div id="submit">
+            <button onclick="submitForm()">SUBMIT</button>
+          </div>
+        </form>
+        </details>
+      </div>
+
+
+
+
+
+    <div class="hide" id="thankyou">
+      <div class="col">
+        <p>We thank you for your participation. If you have any questions or concerns, the contact details of the principal investigators are provided below:</p>
+        
+        <div class="row">
+          <div class="contact-card">
+            <h4>Thomas M. Chapell</h4>
+            <a href="mailto:thomas.chappell@tamu.edu">thomas_chappel@tamu.edu</a>
+          </div>
+          <div class="contact-card">
+            <h4>Holli R. Leggette</h4>
+            <a href="mailto:hollileggette@tamu.edu">hollileggette@tamu.edu</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script>
+      init();
+    </script>
+
+  </body>
+</html>
